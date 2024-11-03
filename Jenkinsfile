@@ -32,9 +32,9 @@ pipeline {
                 script {
                     // Stop and remove the old container if it exists
                     sh """
-                    if [ \$(docker ps -q -f name=${DOCKER_IMAGE}) ]; then
-                        docker stop ${DOCKER_IMAGE}
-                        docker rm ${DOCKER_IMAGE}
+                    if [ \$(docker ps -q -f name=${APP_NAME}) ]; then
+                        docker stop ${APP_NAME}
+                        docker rm ${APP_NAME}
                     fi
                     """
 
