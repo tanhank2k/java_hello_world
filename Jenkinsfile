@@ -40,7 +40,7 @@ pipeline {
 
                     // Run the new container
                     sh """
-                    docker run -d -p 8081:8081 --name ${APP_NAME} ${DOCKER_IMAGE}
+                    docker run -d -p 8081:80 --name ${APP_NAME} ${DOCKER_IMAGE}
                     """
                 }
             }
